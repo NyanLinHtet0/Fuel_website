@@ -1,0 +1,25 @@
+.table-cont{
+    margin: 1rem;
+    width: 90vw;
+}
+
+table { 
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td { 
+    border: 1px solid #000; 
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+}
+th { 
+    background: #f0f0f0;
+    text-align:center;
+    font-size: .9rem;
+    padding: .3rem 0 .3rem 0;
+}
+td {
+    padding: .2rem 0.2rem 0.2rem 0.2rem;
+    font-size: .8rem;
+}
