@@ -11,15 +11,29 @@ table {
 th, td { 
     border: 1px solid #000; 
     text-align: right;
-    font-family: 'Roboto Mono', monospace;
+    
 }
 th { 
     background: #f0f0f0;
     text-align:center;
     font-size: .9rem;
+    font-family: 'Roboto Mono', monospace;
     padding: .3rem 0 .3rem 0;
 }
 td {
     padding: .2rem 0.2rem 0.2rem 0.2rem;
     font-size: .8rem;
+}
+
+.data_input ,.data_input_date ,.data_input_KperL, .data_input_fuel_amount, .data_input_revenue{
+    width: 3rem;
+    text-align: right;
+    /* background-color: aliceblue; */
+    border-style: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.data_input_KperL{
+    width: 2rem;
 }
