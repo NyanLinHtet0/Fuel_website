@@ -1,28 +1,8 @@
-const fuel_consts = ['n_two','n_five','pd','diesel'];
-
-function update_total_lit(){
-    const total_liter = 0;
-    const total_rev = 0;
-    fuel_array_obj.forEach( (item) => {
-        total_rev += getNumericValue(item.rev);
-        total_liter += getNumericValue(item.amount);
-    })
-    tot_liter = document.getElementById('total_liters');
-    tot_liter.textContent = total_liter.toLocaleString();
-    tot_rev = document.getElementById('total_rev');
-    tot_rev.textContent = total_rev.toLocaleString();
-}
-
-function getNumericValue(input) {
-    return parseFloat(input.value.replace(/,/g, '')) || 0;
-}
-
 class fuel {
     constructor(fuel_type) {
         this.amount = document.getElementById(`${fuel_type}_amount`);
         this.price = document.getElementById(`${fuel_type}_price`);
         this.rev = document.getElementById(`${fuel_type}_revenue`);
-
 
         if (this.amount && this.price && this.rev) {
             this.amount.addEventListener('input', () => {
@@ -71,17 +51,11 @@ class fuel {
         const prc = this.getNumericValue(this.price);
         const total = amt * prc;
         this.rev.textContent = total.toLocaleString();
-        update_total_lit();
-    }
-
-    gettotal() {    
     }
 }
 
-
 // Instantiate
-const fuel_array_obj = []
-
-fuel_consts.forEach( (item) => {
-    fuel_array_obj.push(new fuel(item))
-})
+new fuel('n_two');
+new fuel('n_five');
+new fuel('pd');
+new fuel('diesel');
